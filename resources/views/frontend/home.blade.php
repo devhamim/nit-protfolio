@@ -350,7 +350,7 @@
             @foreach ($pricings->take(3) as $pricing)
             <div class="col-lg-4 col-md-6 col-sm-9 order-1">
                 <div class="pricing-item mt-30 animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="0ms">
-                    <h3 class="title">{{ $pricing->price }} Tk</h3>
+                    <h3 class="title">${{ $pricing->price }}</h3>
                     <span>{{ $pricing->title }}</span>
                     <ul>
                         {!! $pricing->description !!}
