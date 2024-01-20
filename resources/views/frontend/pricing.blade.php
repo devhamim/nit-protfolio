@@ -35,11 +35,11 @@
             @foreach ($pricings as $pricing)
             <div class="col-lg-4 col-md-6 col-sm-9 order-1">
                 <div class="pricing-item mt-30 animated wow fadeInLeft animated" data-wow-duration="1000ms" data-wow-delay="0ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 0ms; animation-name: fadeInLeft;">
-                    <h3 class="title">{{ $pricing->price }} TK</h3>
+                    <h3 class="title">${{ $pricing->price }}</h3>
                     <span>{{ $pricing->title }}</span>
                     <p>{!! $pricing->description !!}</p>
 
-                    <a class="main-btn" href="{{ $pricing->link }}">Get Started</a>
+                    <a class="main-btn" href="{{ route('pricing.order', $pricing->slug) }}">Order Now</a>
                 </div>
             </div>
             @endforeach
